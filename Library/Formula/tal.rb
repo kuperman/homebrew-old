@@ -7,14 +7,11 @@ class Tal < Formula
 
   def install
       system "make linux"
-      system "install -d #{bin}"
-      system "install tal #{bin}"
-      system "install -d #{man1}"
-      system "install -m 0644 tal.1 #{man1}"
-      system "install -m 0644 LICENSE #{prefix}"
+      bin.install 'tal'
+      man1.install 'tal.1'
   end
 
   def test
-    system "tal /etc/passwd"
+    system "#{bin}/tal /etc/passwd"
   end
 end
