@@ -6,9 +6,9 @@ class Tal < Formula
   md5 'a22e53f5f0d701a408e98e480311700b'
 
   def install
-      system "make linux"
-      bin.install 'tal'
-      man1.install 'tal.1'
+    system "make linux"
+    bin.install 'tal'
+    man1.install 'tal.1'
   end
 
   def test
