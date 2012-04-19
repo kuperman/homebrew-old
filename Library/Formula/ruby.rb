@@ -7,9 +7,12 @@ class Ruby < Formula
   sha256 '8b3c035cf4f0ad6420f447d6a48e8817e5384d0504514939aeb156e251d44cce'
 
   depends_on 'readline'
+  depends_on 'gdbm'
   depends_on 'libyaml'
 
-  fails_with_llvm :build => 2326
+  fails_with :llvm do
+    build 2326
+  end
 
   # Stripping breaks dynamic linking
   skip_clean :all
