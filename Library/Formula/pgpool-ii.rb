@@ -20,9 +20,9 @@ class PostgresqlInstalled < Requirement
 end
 
 class PgpoolIi < Formula
-  homepage 'http://pgpool.projects.postgresql.org/'
-  url 'http://pgfoundry.org/frs/download.php/2841/pgpool-II-3.0.1.tar.gz'
-  md5 '86d8beff0396d11b6753dd2be31bcad7'
+  homepage 'http://www.pgpool.net/mediawiki/index.php/Main_Page'
+  url 'http://www.pgpool.net/mediawiki/download.php?f=pgpool-II-3.1.3.tar.gz'
+  sha1 '99e45bd218ab780e982116860fee11a605bd834f'
 
   depends_on PostgresqlInstalled.new
 
