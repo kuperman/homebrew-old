@@ -27,7 +27,7 @@ class Mutt < Formula
       ['--trash-patch-bk', 'http://www.cs.oberlin.edu/~kuperman/help/code/patch-1.5.20.bk.trash_folder-purge_message.1.txt'],
       ['--ignore-thread-patch', 'http://ben.at.tanjero.com/patches/ignore-thread-1.5.21.patch'],
       ['--pgp-verbose-mime-patch',
-          'http://patch-tracker.debian.org/patch/series/dl/mutt/1.5.21-6.1/features-old/patch-1.5.4.vk.pgp_verbose_mime'],
+          'http://patch-tracker.debian.org/patch/series/dl/mutt/1.5.21-6.2/features-old/patch-1.5.4.vk.pgp_verbose_mime'],
     ]
 
     p = []
