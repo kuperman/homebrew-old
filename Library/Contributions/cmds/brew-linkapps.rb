@@ -1,11 +1,12 @@
 # Links any Applications (.app) found in installed prefixes to ~/Applications
 require "formula"
 
-HOME_APPS = File.expand_path("~/Applications")
+APP_DEST_DIR="~/Applications"
+HOME_APPS = File.expand_path(APP_DEST_DIR)
 
 unless File.exist? HOME_APPS
   opoo "#{HOME_APPS} does not exist, stopping."
-  puts "Run `mkdir ~/Applications` first."
+  puts "Run `mkdir #{APP_DEST_DIR}` first."
   exit 1
 end
 
@@ -43,4 +44,4 @@ HOMEBREW_CELLAR.subdirs.each do |keg|
   end
 end
 
-puts "Finished linking. Find the links under ~/Applications."
+puts "Finished linking. Find the links under #{APP_DEST_DIR}."
