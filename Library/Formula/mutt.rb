@@ -29,9 +29,10 @@ class Mutt < Formula
     ]
 
     if build.include? "with-purge-patch" and not build.include? "with-trash-patch"
-      build << "with-trash-patch"
       puts "\n"
-      onoe "The purge-patch requires the trash-patch. Adding it."
+      opoo "The purge-patch requires the trash-patch. Adding it."
+      # apply trash before purge
+      build.unshift "with-trash-patch"
     end
 
     if build.include? "with-ignore-thread-patch" and build.include? "with-sidebar-patch"
