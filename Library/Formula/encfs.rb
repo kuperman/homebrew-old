@@ -13,6 +13,7 @@ class Encfs < Formula
 
   def install
     inreplace "configure", "-lfuse", "-lfuse4x"
+    inreplace "encfs/encfssh", "fusermount -u", "umount"
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--with-boost=#{HOMEBREW_PREFIX}"
